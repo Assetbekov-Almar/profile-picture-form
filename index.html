@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+	<title>Profile Picture Form</title>
+</head>
+
+<body>
+<div class="success-message alert alert-success d-none" role="alert">
+	Данные успешно отправлены на сервер
+</div>
+<form action="file.php" class="needs-validation" novalidate id="profile-picture-form" method="POST">
+<div class="profile-picture-data border border-primary rounded">
+	<div class="profile-picture-section">
+		<div class="custom-file">
+			<input type="file" class="custom-file-input" name="profile-picture" id="profile-picture" accept="image/jpg, image/jpeg, image/png" required>
+			<label class="custom-file-label" for="profile-picture">Choose file</label>
+			<div class="invalid-feedback invalid-profile-picture-upload d-none">
+				Загрузите аватар, пожалуйста.
+			</div>
+		</div>
+		<div class="profile-picture-preview-details"></div>
+	</div>
+</div>
+<div class="submit-form-section">
+	<input class="btn btn-primary btn-lg submit-btn" type="submit" value="Submit">
+</div>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
